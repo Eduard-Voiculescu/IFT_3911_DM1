@@ -42,4 +42,3 @@ E: 50% du plein tarif <br>
 
 ### Consultation
 Le système affiche tous les vols qui partent et qui arrivent à un aéroport en montrant tous les détails de chaque vol. Le système affiche tous les vols effectués par une compagnie aérienne en montrant tous les détails de chaque vol.
-s
