@@ -1,0 +1,16 @@
+context Flight inv:
+    self.origin <> self.destination
+
+context Airline inv :
+    self.id == (self.flight.flightId -> substring(1,3)) and
+    self.flight -> select(flightId) -> isUnique()
+
+context Airline inv :
+    self.flight.plane.section ->collectNested(firstClass.price) -> not isUnique() and
+    self.flight.plane.section ->collectNested(buisnessClass.price) -> not isUnique() and
+    self.flight.plane.section ->collectNested(premiumClass.price) -> not isUnique() and
+    self.flight.plane.section ->collectNested(economicClass.price) -> not isUnique()
+
+context Seat::reserved():Boolean
+    post : result = self.status == "free"
+    
