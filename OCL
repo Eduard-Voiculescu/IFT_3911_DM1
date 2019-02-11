@@ -12,5 +12,6 @@ context Airline inv :
     self.flight.plane.section ->collectNested(economicClass.price) -> not isUnique()
 
 context Seat::reserved():Boolean
-    post : result = self.status == "free"
+    pre : self.status == "FREE"
+    pre : self.status = "OCCUPIED"
     
