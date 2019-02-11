@@ -34,7 +34,7 @@
         <br>
         <span style="font-weight: bold;">Courriel: </span>alain.eid@umontreal.ca
         <br>
-        <span style="font-weight: bold;">temps mis: </span>40 heures
+        <span style="font-weight: bold;">temps mis: </span>22 heures
     </p>
     <p>
         <span style="font-weight: bold;">Nom: </span>STEENHAUT Sami
@@ -43,7 +43,7 @@
         <br>
         <span style="font-weight: bold;">Courriel: </span>sami.steenhaut@umontreal.ca
         <br>
-        <span style="font-weight: bold;">temps mis: </span>40 heures
+        <span style="font-weight: bold;">temps mis: </span>23 heures
     </p>
     <p>
         <span style="font-weight: bold;">Nom: </span>VOICULESCU Eduard
@@ -52,7 +52,7 @@
         <br>
         <span style="font-weight: bold;">Courriel: </span>eduard.voiculescu@umontreal.ca
         <br>
-        <span style="font-weight: bold;">temps mis: </span>40 heures
+        <span style="font-weight: bold;">temps mis: </span>25 heures
     </p>
     <h2>
         Distribution des tâches</h2>
@@ -87,13 +87,13 @@
                     </ul>
                 </td>
                 <td>
-                    
+                    30%
                 </td>
                 <td>
-                    
+                    30%
                 </td>
                 <td>
-
+                    40%
                 </td>
             </tr>
             <tr>
@@ -114,13 +114,13 @@
                     </ul>
                 </td>
                 <td>
-                    
+                    33%
                 </td>
                 <td>
-                    
+                    33%
                 </td>
                 <td>
-
+                    33%
                 </td>
             </tr>
             <tr>
@@ -134,26 +134,26 @@
                     </ul>
                 </td>
                 <td>
-                    
+                    25%
                 </td>
                 <td>
-                    
+                    50%
                 </td>
                 <td>
-
+                    25%
                 </td>
             </tr>
             <tr>
                 <td class="first_col">
                     Diagramme d'état d'un siège
                 </td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>15%</td>
+                <td>15%</td>
+                <td>70%</td>
             </tr>
             <tr>
                 <td class="first_col">
-                    Justifications ?
+                    Justifications ? (voir plus bas)
                 </td>
                 <td></td>
                 <td></td>
@@ -171,21 +171,28 @@
     </ul>
     <img src="./rapport_files/islands-paradise-maldive-nature-background-image-landscape-194469.jpg" width="500px" alt="some image">
     <h2>Tâche 2 : Design Logiciel</h2>
-    <p>
-        Voicu notre solution pour le design logiciel.
-    </p>
-    <p>
-        Pour cette option suivante: <b>Il a l'option de choisir une priorité entre l'aile ou la fenêtre</b>, nous l'avons interprété comme si le client choisi sa position dans du siège avant même de voir les sièges disponibles. Nous avons donc décidé de créer un fichier qui va contenir les énums des positions des sièges (FREE, RESERVED, OCCUPIED).
-    </p>
-    <p>
-        Pour que quelqu'un accède à notre Système de Gestion de Réservation de Vol, nous assumons que ce dernier est soit un client soit un administrateur. Donc la première fois que ce dernier entre dans le système, il devra s'identifier quant étant client ou administrateur. Si c'est un nouveau client, il devra entrer des informations personnelles pour qu'il soit administré dans le système.
-    </p>
-    <p>
-        explioquer pk on a pas fait de db de carte de credit
-    </p>
-    <p>
-        expliquer quon a pas de ddatabase pour le refund des paiements, on sait que idealement il faut que le refund soit fait sur la mm carte de credit, mais nous omettons ce point la.
-    </p>
-
+    <h3>
+        Justifications: 
+    </h3>
+    <ul>
+        <li>
+            Pour cette option suivante: <b>Il a l'option de choisir une priorité entre l'aile ou la fenêtre</b>, nous l'avons interprété comme si le client choisi sa position dans du siège avant même de voir les sièges disponibles. <br>
+            Nous avons donc décidé de créer un fichier qui va contenir les énums des positions des sièges (FREE, RESERVED, OCCUPIED).
+        </li>
+        <li>
+            Pour que quelqu'un accède à notre Système de Gestion de Réservation de Vol, nous assumons que ce dernier est soit un client soit un administrateur. <br>
+            Donc la première fois que ce dernier entre dans le système, il devra s'identifier quant étant client ou administrateur. <br>
+            Si c'est un nouveau client, il devra entrer des informations personnelles pour qu'il soit administré dans le système.
+        </li>
+        <li>
+            Nous avons pris la décision de ne pas faire de controlleur pour les cartes de crédit. En fait, nous ne gérons pas les databases de carte de crédit. <br>
+            Donc nous ne stockons pas les données des cartes de crédits des clients pour des raisons de sécurité. <br>
+            Nous gérons les transactions de paiements et de remboursement. Malheureusement, nous avons passé beaucoup trop de temps pour les différents controlleurs ce qui a fait <br>
+            en sorte qu'il nous manquait de temps pour la partie de la carte de crédit. Donc le client aura le fardeau de toujours remettre les informations de sa carte de crédit tant <br> 
+            qu'au remboursement et au paiement. De plus, pour la prochaine itération, nous allons faire un controlleur pour les cartes de crédits et une database également (idéalement cette dernière sera encryptée). <br>
+            La raison est assez intuitive, d'une part c'est plus facile pour le client (il ne devra pas toujours remettre l'information) et également on va ajouter un vérificateur <br>
+            qui va s'assurer que le remboursement est fait sur la même carte de crédit que le paiement. Parce que pour l'instant, le client pourrait avoir un remboursement sur une autre carte de crédit que la sienne.     
+        </li>
+    </ul>
 
 </body></html>
